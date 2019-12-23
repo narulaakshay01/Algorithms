@@ -1,0 +1,41 @@
+Split 1:
+Attributes :[Alt, Bar, Fri, Hun, Pat, Price, Rain, Res, Type, Est]
+Information Gain :[0.0, 0.0, 0.020720839623907805, 0.19570962879973086, 0.5408520829727552, 0.19570962879973075, 0.0, 0.020720839623907805, 0.0, 0.20751874963942196]
+With max gain of 0.5408520829727552 with split on Pat
+
+Split 2:
+Attributes :[Alt, Bar, Fri, Hun, Price, Rain, Res, Type, Est]
+Information Gain :[0.109170338675599, 0.0, 0.109170338675599, 0.2516291673878229, 0.2516291673878229, 0.109170338675599, 0.2516291673878229, 0.2516291673878229, 0.2516291673878229]
+With max gain of 0.2516291673878229 with split on Hun
+
+Split 3:
+Attributes :[Alt, Bar, Fri, Price, Rain, Res, Type, Est]
+Information Gain :[0.0, 0.0, 0.31127812445913283, 0.31127812445913283, 0.0, 0.31127812445913283, 0.5, 0.0]
+With max gain of 0.5 with split on Type
+
+Split 4:
+Attributes :[Alt, Bar, Fri, Price, Rain, Res, Est]
+Information Gain :[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+With max gain of 1.0 with split on Fri
+
+Decision Tree
+
+Pat
+|>>>>Some = Yes
+|>>>>None = No
+|>>>>Full = Hun
+|	|>>>>No = No
+|	|>>>>Yes = Type
+|	|	|>>>>Burger = Yes
+|	|	|>>>>Italian = No
+|	|	|>>>>French = Yes
+|	|	|>>>>Thai = Fri
+|	|	|	|>>>>No = No
+|	|	|	|>>>>Yes = Yes
+
+After Pruning
+
+Pat
+|>>>>Some = Yes
+|>>>>None = No
+|>>>>Full = No
